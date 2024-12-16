@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbessertes RPG-Spiel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="start-screen">
+        <h2>RPG Spiel</h2>
+        <label for="playerName">Spieler Name:</label>
+        <input type="text" id="playerName" placeholder="Name eingeben">
+        <button id="startButton">Start</button>
+    </div>
+
+    <div id="game" style="display: none;">
+        <div id="scoreboard">
+            <h3>Scoreboard</h3>
+            <p>Name: <span id="scoreName">Held</span></p>
+            <p>Punkte: <span id="score">0</span></p>
+        </div>
+
+        <div id="main">
+            <div id="character">
+                <h2>Held</h2>
+                <p>Name: <span id="charName">Held</span></p>
+                <p>HP: <span id="charHP">115</span></p>
+                <p>Schild: <span id="charShield">100</span></p>
+                <p>Schaden: <span id="charAttack">10</span></p>
+                <p>Tränke: <span id="charPotions">3</span></p>
+            </div>
+
+            <div id="enemy">
+                <h2>Monster</h2>
+                <p>Name: <span id="enemyName">Goblin</span></p>
+                <p>Spezies: <span id="enemySpecies">Goblin</span></p>
+                <p>HP: <span id="enemyHP">50</span></p>
+                <p>Schaden: <span id="enemyAttack">5</span></p>
+            </div>
+
+            <div id="actions">
+                <button onclick="attack()">Angreifen</button>
+                <button onclick="heal()">Trank benutzen</button>
+                <button onclick="resetGame()">Neustarten</button>
+            </div>
+        </div>
+
+        <div id="log">
+            <h3>Kampf-Log</h3>
+            <p id="logText">Das Spiel beginnt!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
